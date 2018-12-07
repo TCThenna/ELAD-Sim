@@ -43,10 +43,11 @@
 \title{Simulation of enhanced lateral drift sensors}
 
 \author[desy]{A.~Velyka}
-\ead{a.v@desy.de}
+\ead{anastasiia.velyka@desy.de}
+\address[desy]{Notkestr. 85, 22607 Hamburg, Germany}
 
 \author[cern]{S.~Spannagel\corref{cor2}}
-\ead{s.s@cern.ch}
+\ead{simon.spannagel@cern.ch}
 
 \address[cern]{Route de , Geneva, Switzerland}
 
@@ -54,21 +55,15 @@
 \ead{hendrik.jansen@desy.de}
 
 \cortext[cor1]{Corresponding author}
-\address[desy]{Notkestr. 85, 22607 Hamburg, Germany}
+
 
 \begin{abstract}
 A novel concept of a layer-wise produced semiconductor sensor for precise particle tracking is proposed herein. 
-In contrast to common semiconductor sensors, local regions with increased doping concentration deep in the bulk termed \textit {charge guides}
- increase the lateral drift of free charges on their way to the read-out electrode. 
-This lateral drift enables charge sharing independent of the incident position of the traversing particle. 
-With a regular grid of charge guides the lateral charge distribution resembles a normalised Pascal's triangle for particles that are stopped in depths lower than the depth of the first layer of the charge guides. 
-%For different configurations and patterns, a combination of binomial distributions is thought to describe the lateral charge distribution. 
-For minimum ionising particles a sum of binomial distributions describes the lateral charge distribution. 
-This concept decouples the achievable sensor resolution from the pitch size as the characteristic length is replaced by the lateral distance of the charge guides. 
+
 \end{abstract}
 
 \begin{keyword}
-Semiconductor detector \sep deep bulk engineering \sep sensor concept \sep precision particle tracking
+Semiconductor detector \sep deep bulk engineering \sep conceptual design \sep precision particle tracking
 \PACS 29.40.Wk \sep 72.20.Fr
 \end{keyword}
 
@@ -76,38 +71,53 @@ Semiconductor detector \sep deep bulk engineering \sep sensor concept \sep preci
 
 \linenumbers
 \section{Introduction}
-The necessity for charged particle detectors with improved spatial resolution drives many silicon-detector R\&D projects in various areas of research towards small pitch sizes.
+Precision measurements of Higgs decays at a future collider necessitate charged particle detectors with single point resolutions of about $\SI{3}{\um}$ at sensor thickness at or below $\SI{100}{\um}$.~\cite{DominiksCLICNote}
+These requirements drive the mainstream  of detector R\&D for collider experiments towards smaller and smaller sensor unit-cells, or pitches.
 However, this evolutionary approach increases the number of read-out channels resulting in various disadvantages. 
-In this work, a new sensor concept exemplifying a strategy for high-precision silicon sensors is proposed that avoids the small pitch paradigm and decouples the sensor resolution from its pitch size and thickness.
-Implants deep inside the bulk of this new sensor are foreseen to laterally enlarge the charge cloud produced by a traversing particle, thus enhancing charge sharing between neighbouring strips/pixels. 
-With appropriately placed deep implants, the lateral drift can be optimised towards optimal charge sharing and hence resolution of the incident position. 
-In this concept of an enhanced lateral drift (ELAD) sensor, the linearity of the charge sharing and Landau fluctuations dominate the sensor resolution rather than the pitch size
- – even for thin sensors, where usually almost no charge sharing takes place.
+In this work, a new sensor concept is presented that exemplifies a strategy towards achieving the theoretical optimum of position resolution. 
+It avoids the small pitch paradigm as much as possible and renders optimal spatial resolution possible, even at sensor thickness of $\SI{50}{\um}$.
+In this new approach, implants (volumes with higher doping concentration compared to the background concentration) deep inside the bulk guide the charge cloud produced by a traversing particle laterally towards
+ the boarder between two unit-cells, thus enhancing charge sharing between neighbouring strips/pixels. 
+With appropriately placed deep implants, the lateral drift can be optimised towards optimal, i.e.\ linear charge sharing and hence optimal resolution of the incident position at a given pitch size. 
+In this concept of an enhanced lateral drift (ELAD) sensor, the degree of linearity of the charge sharing and Landau fluctuations limit the sensor resolution. %FIXME check if this is true :D
+ 
+This is some reference that can be deleted~\cite{Moliere:1948zz,PhysRev.89.1256}
 
- ~\cite{Moliere:1948zz,PhysRev.89.1256}
+\section{The concept of ELAD sensors}
 
-\section{The concept of pLAD sensors}
+conceptual discussion, position resolution, drift and diffusion, deep implants, bulk engineering, n- and p-ELAD, ...
 
+\section{Device optimisation of an ELAD sensor}
+
+Initial geometry, optimisation strategy, static and transient, ...
+
+\section{Monte Carlo studies}
+
+AP2, which modules, manipulations of the TCAD field, MIPs, drift and diff, 
+
+\section{Results}
+
+tcad eta functions, AP2 eta functions
+
+\section{Discussion}
+
+single point res a.f.o various parameters: concentration, bias voltage, thickness, maybe turn on/off Landau if possible
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.99\textwidth]{figures/2Dxy} %\put(-35,0){$[\si{\um}]$} \put(-335,180){$[\si{\um}]$}
-  \caption{The electric field distribution in a pLAD sensor.
-  The black rectangles in the centre of the figure mark the deep p$^+$-implants (charge guides) in the p-bulk.
-  Units are in micrometer.}
-\label{fig:potential}
+  \includegraphics[width=0.8\textwidth]{figures/dummy} %\put(-35,0){$[\si{\um}]$} \put(-335,180){$[\si{\um}]$}
+  \caption{dummy}
+\label{fig:dummy}
 \end{figure}
 
-\section{Summary}
-A novel concept of semiconductor particle sensors was proposed that decouples the achievable spatial resolution of the sensor from the pitch size of the read-out electronics. 
-For this, implants acting as charge guides deep in the bulk of the sensor need to be engineered appropriately for enhanced lateral charge drift. 
-The characteristic length affecting the spatial resolution is the distance between the charge guides rather than the pitch size. 
-Preliminary simulations show the feasibility of enabling lateral charge drift by local high dose implants of Boron atoms in a p-type sensors. 
+\section{Conclusion}
+
 
 \section*{Acknowledgement}
 This project is funded via PIER Hamburg, grant no. PIF-2015-37.
 
-
+\small
+\section*{References}
 \bibliographystyle{unsrt}
 \bibliography{bibtex/refs}
 
