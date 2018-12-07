@@ -1,0 +1,76 @@
+# Ignore binaries:
+bin/*
+
+# Ignore build files:
+build/*
+
+# Ignore libraries:
+lib/*
+
+# ignore ROOT files
+*.root
+
+# ignore emacs autosaves
+\#*#
+*~
+
+# ignore vim autosaves
+.*.swp
+*.cc.swo
+
+# ignore kate autosave
+*kate-swp
+
+# ignore git mergetool backup files
+*.orig
+
+# ignore eclipse project files
+.project
+.cproject
+
+# ignore MSVC files
+*.vcxproj*
+
+# ignore archives
+*.zip
+*.rar
+*.7z
+*.gz
+*.tar*
+
+# ignore OS files
+Thumbs.db
+*.lnk
+
+#ignore directory settings
+.directory
+
+#ignore input data
+filteredhistos/*
+
+#ignore out[ut data
+pics/*
+
+#ignore kile project files
+*.kilepr
+
+#ignore tex aux/bbl/blg
+*.aux
+*.bbl
+*.blg
+*.log
+*.synctex.gz
+
+#ignore bib file
+*.bib
+
+#ignore REVTEX
+DOWNLOAD
+README
+00readme.tex
+
+#ignore PDF
+*.pdf
+
+#ignore tex backup files
+*.tex.backup
