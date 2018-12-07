@@ -1,0 +1,115 @@
+\documentclass[preprint]{elsarticle}
+%\documentclass[review,number,sort&compress]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[load-configurations=abbreviations]{siunitx}
+\usepackage[european]{circuitikz}
+\usepackage{xstring}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[active]{srcltx}
+\usepackage{multicol}
+%\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{nicefrac}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{color}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+\newcommand{\sigmabin}{\ensuremath{\mathnormal{\sigma_{\textrm{bin}}}}}
+\newcommand{\sigmaimp}{\ensuremath{\mathnormal{\sigma_{\textrm{imp}}}}}
+\newcommand{\deltaimp}{\ensuremath{\mathnormal{\delta_{\textrm{imp}}}}}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+
+%linenumbers
+\setpagewiselinenumbers
+\modulolinenumbers[5]
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+\title{Simulation of enhanced lateral drift sensors}
+
+\author[desy]{A.~Velyka}
+\ead{a.v@desy.de}
+
+\author[cern]{S.~Spannagel\corref{cor2}}
+\ead{s.s@cern.ch}
+
+\address[cern]{Route de , Geneva, Switzerland}
+
+\author[desy]{H.~Jansen\corref{cor1}}
+\ead{hendrik.jansen@desy.de}
+
+\cortext[cor1]{Corresponding author}
+\address[desy]{Notkestr. 85, 22607 Hamburg, Germany}
+
+\begin{abstract}
+A novel concept of a layer-wise produced semiconductor sensor for precise particle tracking is proposed herein. 
+In contrast to common semiconductor sensors, local regions with increased doping concentration deep in the bulk termed \textit {charge guides}
+ increase the lateral drift of free charges on their way to the read-out electrode. 
+This lateral drift enables charge sharing independent of the incident position of the traversing particle. 
+With a regular grid of charge guides the lateral charge distribution resembles a normalised Pascal's triangle for particles that are stopped in depths lower than the depth of the first layer of the charge guides. 
+%For different configurations and patterns, a combination of binomial distributions is thought to describe the lateral charge distribution. 
+For minimum ionising particles a sum of binomial distributions describes the lateral charge distribution. 
+This concept decouples the achievable sensor resolution from the pitch size as the characteristic length is replaced by the lateral distance of the charge guides. 
+\end{abstract}
+
+\begin{keyword}
+Semiconductor detector \sep deep bulk engineering \sep sensor concept \sep precision particle tracking
+\PACS 29.40.Wk \sep 72.20.Fr
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+\section{Introduction}
+The necessity for charged particle detectors with improved spatial resolution drives many silicon-detector R\&D projects in various areas of research towards small pitch sizes.
+However, this evolutionary approach increases the number of read-out channels resulting in various disadvantages. 
+In this work, a new sensor concept exemplifying a strategy for high-precision silicon sensors is proposed that avoids the small pitch paradigm and decouples the sensor resolution from its pitch size and thickness.
+Implants deep inside the bulk of this new sensor are foreseen to laterally enlarge the charge cloud produced by a traversing particle, thus enhancing charge sharing between neighbouring strips/pixels. 
+With appropriately placed deep implants, the lateral drift can be optimised towards optimal charge sharing and hence resolution of the incident position. 
+In this concept of an enhanced lateral drift (ELAD) sensor, the linearity of the charge sharing and Landau fluctuations dominate the sensor resolution rather than the pitch size
+ – even for thin sensors, where usually almost no charge sharing takes place.
+
+ ~\cite{Moliere:1948zz,PhysRev.89.1256}
+
+\section{The concept of pLAD sensors}
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.99\textwidth]{figures/2Dxy} %\put(-35,0){$[\si{\um}]$} \put(-335,180){$[\si{\um}]$}
+  \caption{The electric field distribution in a pLAD sensor.
+  The black rectangles in the centre of the figure mark the deep p$^+$-implants (charge guides) in the p-bulk.
+  Units are in micrometer.}
+\label{fig:potential}
+\end{figure}
+
+\section{Summary}
+A novel concept of semiconductor particle sensors was proposed that decouples the achievable spatial resolution of the sensor from the pitch size of the read-out electronics. 
+For this, implants acting as charge guides deep in the bulk of the sensor need to be engineered appropriately for enhanced lateral charge drift. 
+The characteristic length affecting the spatial resolution is the distance between the charge guides rather than the pitch size. 
+Preliminary simulations show the feasibility of enabling lateral charge drift by local high dose implants of Boron atoms in a p-type sensors. 
+
+\section*{Acknowledgement}
+This project is funded via PIER Hamburg, grant no. PIF-2015-37.
+
+
+\bibliographystyle{unsrt}
+\bibliography{bibtex/refs}
+
+
+\end{document}

@@ -61,9 +61,6 @@ pics/*
 *.log
 *.synctex.gz
 
-#ignore bib file
-*.bib
-
 #ignore REVTEX
 DOWNLOAD
 README
